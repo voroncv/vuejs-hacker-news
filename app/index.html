@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Main page</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <div class="inner">
+        <a href="/" class=""><img src="assets/img/logo.png" alt="logo" class="logo"></a>
+        <a href="/" class="router-link-active">News</a>
+      </div>
+    </div>
+    <div class="news-view view">
+
+      <div class="news-list-nav">
+        <a class="disabled">&lt; prev</a>
+        <span>1/1</span>
+        <a class="disabled" class="">more &gt;</a>
+      </div>
+
+      <div class="news-list">
+        <ul v-for="post in posts">
+          <li class="news-item">
+            <span class="score">{{ post.id }}</span>
+            <span class="title"><a target="_blank">{{ post.title }}</a></span>
+            <br>
+            <span class="meta">by {{ post.author }}</span>
+          </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  
+  <script src="assets/js/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+	<script src="assets/js/main.js"></script>
+  
+</body>
+</html>
