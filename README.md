@@ -3,6 +3,7 @@
 ### Clone 
 ```
 $ git clone https://github.com/voroncv/vuejs-hacker-news.git
+$ cd vuejs-hacker-news
 ```
 ### Install NPM
 ```
