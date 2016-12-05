@@ -1,5 +1,5 @@
 ## Hacker News site
-### A hacker news site on VueJS and ExpressJS
+### A hacker news site on VueJS V1 and ExpressJS
 ### Clone 
 ```
 $ git clone https://github.com/voroncv/vuejs-hacker-news.git
