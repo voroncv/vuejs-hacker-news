@@ -11,6 +11,6 @@ $ npm install
 ```
 ### Setup
 ```
-$ node app.js
+$ npm start
 ```
 ### To start gulp, open a new terminal window with a project and write 'gulp'. Gulp minifitsiruet JS script code and compiles Sass code to CSS
