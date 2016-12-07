@@ -15,25 +15,31 @@
     </div>
     <div class="news-view view">
       <div class="news-list-nav">
-        <a @click="backPage(pageNumber)">&lt; prev</a>
-        <span>{{ currentPage+1 }} / {{ totalPages }}</span>
-        <a @click="nextPage(pageNumber)">more &gt;</a>
+      <paginate-links
+        for="posts"
+        :simple="{
+          prev: '< prev',
+          next: 'more >'
+        }">
+        </paginate-links>
       </div>
 
-      <div class="news-list">
-        <ul v-for="post in posts | paginate">
-          <li class="news-item">
+      <paginate name="posts" :per="5" :list="posts" class="news-list">
+      
+          <li v-for="post in paginated('posts')" class="news-item">
             <span class="score">{{ post.id }}</span>
             <span class="title"><a target="_blank">{{ post.title }}</a></span>
             <br>
             <span class="meta">by {{ post.author }}</span>
           </li>
-          </ul>
-        </div>
+      
+      </paginate>
+      
     </div>
   </div>
   
-  <script src="http://v1.vuejs.org/js/vue.min.js"></script>
+  <script src="https://vuejs.org/js/vue.min.js"></script> 
+<script src="https://rawgit.com/TahaSh/vue-paginate/master/dist/vue-paginate.js"></script>
 	<script src="assets/js/main.js"></script>
   
 </body>

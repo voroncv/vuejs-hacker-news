@@ -54,35 +54,6 @@ new Vue({
           date: '4.12.16'
         }
     ],
-        currentPage: 0,
-        itemsPerPage: 5,
-        resultCount: 0
-  },
-  computed: {
-        totalPages: function() {
-          return Math.ceil(this.resultCount / this.itemsPerPage)
-        }
-    },
-  methods: {
-        backPage: function(pageNumber) {
-          if(!this.currentPage < 1) {
-            this.currentPage--;
-          }
-        },
-        nextPage: function(pageNumber) {
-          if(!this.currentPage < this.totalPages) {
-            this.currentPage++;
-          }
-        }
-    },
-    filters: {
-        paginate: function(list) {
-            this.resultCount = list.length
-            if (this.currentPage >= this.totalPages) {
-              this.currentPage = this.totalPages - 1
-            }
-            var index = this.currentPage * this.itemsPerPage
-            return list.slice(index, index + this.itemsPerPage)
-        }
-    }
+    paginate: ['posts']
+  }
 })

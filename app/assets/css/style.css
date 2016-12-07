@@ -93,6 +93,7 @@ a {
 .news-list,
 .news-list-nav {
   background-color: #fff;
+  list-style: none;
   border-radius: 2px; }
 
 .news-list-nav {
@@ -339,3 +340,9 @@ a {
 
 .user-view .links a {
   text-decoration: underline; }
+
+ul.paginate-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0; }
